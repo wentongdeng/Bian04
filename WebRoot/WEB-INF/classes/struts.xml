@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="load" extends="json-default">
+		<action name="loadMassage" class="MassageAction" method="listMassage">
+			<result name="list" type="json">
+				<param name="root">map</param>
+			</result>
+		</action>
+		<action name="listExtendMassage" class="MassageAction" method="listExtendMassage">
+			<result name="listExtendMassage" type="json">
+				<param name="root">listMassage</param>
+			</result>
+		</action>
+	</package>
+</struts>    
